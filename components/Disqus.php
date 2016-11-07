@@ -5,6 +5,7 @@ use MaDnh\Disqus\Models\Settings;
 
 class Disqus extends ComponentBase
 {
+    public $disqus;
     public function componentDetails()
     {
         return [
@@ -34,7 +35,7 @@ class Disqus extends ComponentBase
         ];
     }
 
-    public function onRun()
+    public function onRender()
     {
         $disqus = [
             'page_url' => $this->property('page_url'),
@@ -45,7 +46,7 @@ class Disqus extends ComponentBase
         $disqus['sub_domain'] = Settings::get('sub_domain');
         $disqus['noscript_content'] = Settings::get('noscript_content');
 
-        $this->page['disqus'] = $disqus;
+        $this->disqus = $this->page['disqus'] = $disqus;
     }
 
 }
