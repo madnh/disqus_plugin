@@ -1,7 +1,7 @@
-<?php namespace Madnh\Disqus\Components;
+<?php namespace MaDnh\Disqus\Components;
 
 use Cms\Classes\ComponentBase;
-use Madnh\Disqus\Models\Settings;
+use MaDnh\Disqus\Models\Settings;
 
 class Disqus extends ComponentBase
 {

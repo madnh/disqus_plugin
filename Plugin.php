@@ -1,4 +1,4 @@
-<?php namespace Madnh\Disqus;
+<?php namespace MaDnh\Disqus;
 
 use System\Classes\PluginBase;
 use Backend;
@@ -19,7 +19,7 @@ class Plugin extends PluginBase
     public function registerComponents()
     {
         return [
-            'Madnh\Disqus\Components\Disqus' => 'disqus'
+            'MaDnh\Disqus\Components\Disqus' => 'disqus'
         ];
     }
 
@@ -31,7 +31,7 @@ class Plugin extends PluginBase
                 'description' => 'The #1 way to build your audience',
                 'category' => 'Plugins',
                 'icon' => 'icon-comments-o',
-                'class' => 'Madnh\Disqus\Models\Settings',
+                'class' => 'MaDnh\Disqus\Models\Settings',
                 'order' => 500,
                 'permissions' => ['madnh.disqus.access_settings']
             ]

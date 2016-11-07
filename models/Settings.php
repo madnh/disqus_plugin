@@ -1,4 +1,4 @@
-<?php namespace Madnh\Disqus\Models;
+<?php namespace MaDnh\Disqus\Models;
 
 use Model;
 
