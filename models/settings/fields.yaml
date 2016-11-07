@@ -1,0 +1,14 @@
+fields:
+    sub_domain:
+        label: 'Disqus subdomain'
+        oc.commentPosition: ''
+        span: full
+        required: 1
+        type: text
+    noscript_content:
+        label: 'Message when JS is turn off'
+        oc.commentPosition: ''
+        size: giant
+        language: html
+        span: full
+        type: codeeditor

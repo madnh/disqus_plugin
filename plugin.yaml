@@ -1,0 +1,10 @@
+plugin:
+    name: 'madnh.disqus::lang.plugin.name'
+    description: 'madnh.disqus::lang.plugin.description'
+    author: MaDnh
+    icon: oc-icon-comments-o
+    homepage: ''
+permissions:
+    access_settings:
+        tab: 'madnh.disqus::lang.disqus'
+        label: 'madnh.disqus::lang.access_settings'
