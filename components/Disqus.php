@@ -49,11 +49,12 @@ class Disqus extends ComponentBase
         $disqus = [
             'page_url' => $this->property('page_url'),
             'page_id_prefix' => $this->property('page_id_prefix'),
-            'page_id' => $this->property('page_id')
+            'page_id' => $this->property('page_id'),
+            'enable' => Settings::get('enable'),
+            'sub_domain' => Settings::get('sub_domain'),
+            'noscript_content' => Settings::get('noscript_content'),
+            'disabled_content' => Settings::get('disabled_content')
         ];
-
-        $disqus['sub_domain'] = Settings::get('sub_domain');
-        $disqus['noscript_content'] = Settings::get('noscript_content');
 
         return $disqus;
     }

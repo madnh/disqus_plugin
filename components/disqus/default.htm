@@ -1,16 +1,27 @@
 {% set disqus = __SELF__.disqus %}
-<div id="disqus_thread"></div>
-<script>
-    var disqus_config = function () {
-        this.page.url = '{{ disqus.page_url }}' || window.location.href;
-        this.page.identifier = "{{ (disqus.page_id_prefix ? disqus.page_id_prefix ~ '_' : '') ~ disqus.page_id }}" || window.location.href;
-    };
+{% if disqus.enable %}
+    {% if not disqus.sub_domain %}
+        <div class="alert alert-warning" role="alert">
+            <strong>Warning!</strong> please config Disqus sub domain first!
+        </div>
+    {% else %}
+        <div id="disqus_thread"></div>
+        <script>
+            var disqus_config = function () {
+                this.page.url = '{{ disqus.page_url }}' || window.location.href;
+                this.page.identifier = "{{ (disqus.page_id_prefix ? disqus.page_id_prefix ~ '_' : '') ~ disqus.page_id }}" || window.location.href;
+            };
 
-    (function () {
-        var d = document, s = d.createElement('script');
-        s.src = '//{{ disqus.sub_domain }}.disqus.com/embed.js';
-        s.setAttribute('data-timestamp', +new Date());
-        (d.head || d.body).appendChild(s);
-    })();
-</script>
-<noscript>{{ disqus.noscript_content | raw }}</noscript>
+            (function () {
+                var d = document, s = d.createElement('script');
+                s.src = '//{{ disqus.sub_domain }}.disqus.com/embed.js';
+                s.setAttribute('data-timestamp', +new Date());
+                (d.head || d.body).appendChild(s);
+            })();
+        </script>
+        <noscript>{{ disqus.noscript_content | raw }}</noscript>
+    {% endif %}
+{% else %}
+    {{ disqus.disabled_content | raw }}
+{% endif %}
+
