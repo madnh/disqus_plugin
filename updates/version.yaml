@@ -1,2 +1,5 @@
 1.0.1:
     - Initialize plugin.
+
+1.0.2:
+    - Add plugin execution life cycle handler name, remove page variable, add LICENCE.md file.

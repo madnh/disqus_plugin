@@ -35,7 +35,16 @@ class Disqus extends ComponentBase
         ];
     }
 
+    public function onRun()
+    {
+        $this->disqus = $this->getData();
+    }
     public function onRender()
+    {
+        $this->disqus = $this->getData();
+    }
+
+    protected function getData()
     {
         $disqus = [
             'page_url' => $this->property('page_url'),
@@ -46,7 +55,7 @@ class Disqus extends ComponentBase
         $disqus['sub_domain'] = Settings::get('sub_domain');
         $disqus['noscript_content'] = Settings::get('noscript_content');
 
-        $this->disqus = $this->page['disqus'] = $disqus;
+        return $disqus;
     }
 
 }

@@ -3,7 +3,7 @@ plugin:
     description: 'madnh.disqus::lang.plugin.description'
     author: MaDnh
     icon: oc-icon-comments-o
-    homepage: ''
+    homepage: 'https://github.com/madnh/disqus_plugin'
 permissions:
     access_settings:
         tab: 'madnh.disqus::lang.disqus'
