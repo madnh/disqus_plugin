@@ -2,7 +2,7 @@ fields:
     enable:
         label: Enable
         span: auto
-        default: '1'
+        default: 1
         type: switch
         comment: 'Enable Disqus or not?'
     sub_domain:
@@ -15,14 +15,14 @@ fields:
     noscript_content:
         label: 'Message when JS is turn off'
         oc.commentPosition: ''
-        size: huge
+        size: large
         language: html
-        span: left
+        span: full
         type: codeeditor
     disabled_content:
         label: 'Disabled content'
         oc.commentPosition: ''
         size: huge
-        language: php
-        span: right
+        language: html
+        span: full
         type: codeeditor
